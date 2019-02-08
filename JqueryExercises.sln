@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JqueryExercises", "JqueryEx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JqueryAjaxExercises", "JqueryAjaxExercises\JqueryAjaxExercises.csproj", "{2C5A7345-0E54-4053-8A6C-CC38ADA9757D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JqueryMultiFileUpload", "JqueryMultiFileUpload\JqueryMultiFileUpload.csproj", "{41F0B85C-41DA-4DF4-9110-8A4E1FA4D49F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JqueryChooseExercises", "JqueryChooseExercises\JqueryChooseExercises.csproj", "{B4D306DA-BA9B-43F3-A8B6-8BA850E482B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JqueryNumberOfCharacters", "JqueryNumberOfCharacters\JqueryNumberOfCharacters.csproj", "{ACF015AC-68E4-4BC8-A5F6-5BD841CFE75D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{2C5A7345-0E54-4053-8A6C-CC38ADA9757D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C5A7345-0E54-4053-8A6C-CC38ADA9757D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C5A7345-0E54-4053-8A6C-CC38ADA9757D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41F0B85C-41DA-4DF4-9110-8A4E1FA4D49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41F0B85C-41DA-4DF4-9110-8A4E1FA4D49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41F0B85C-41DA-4DF4-9110-8A4E1FA4D49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41F0B85C-41DA-4DF4-9110-8A4E1FA4D49F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4D306DA-BA9B-43F3-A8B6-8BA850E482B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4D306DA-BA9B-43F3-A8B6-8BA850E482B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4D306DA-BA9B-43F3-A8B6-8BA850E482B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4D306DA-BA9B-43F3-A8B6-8BA850E482B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF015AC-68E4-4BC8-A5F6-5BD841CFE75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF015AC-68E4-4BC8-A5F6-5BD841CFE75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF015AC-68E4-4BC8-A5F6-5BD841CFE75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF015AC-68E4-4BC8-A5F6-5BD841CFE75D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

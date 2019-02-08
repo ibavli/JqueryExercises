@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "DosyaYukleme";
+}
+
+
+@using (Html.BeginForm("DosyaYukleme", "Home", FormMethod.Post, new { @enctype = "multipart/form-data", @id = "form1" }))
+{
+    <div id="dosyaKontrolleri">
+        <div id="dosya1">
+            <input type="file" name="dosyalar" />
+        </div>
+        <input type="button" id="btnDosyaKontroluEkle" value="Bir dosya daha ekle" />
+        <br />
+        <input type="submit" id="btnYuke" value="Yükle" />
+    </div>
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.kontrolSayisi = 1;
+
+        $("#btnDosyaKontroluEkle").click(function () {
+            if ($.kontrolSayisi <= 20) {
+                $.sonDosyaKontrolununDivi = $("#dosya" + $.kontrolSayisi);
+                $.yeniDosyaKontroluVeDiv = $.sonDosyaKontrolununDivi.clone(true);
+                $.yeniDosyaKontroluVeDiv.attr("id", "dosya" + (++$.kontrolSayisi));
+                $.yeniDosyaKontroluVeDiv.insertAfter($.sonDosyaKontrolununDivi);
+            }
+        });
+    });
+</script>

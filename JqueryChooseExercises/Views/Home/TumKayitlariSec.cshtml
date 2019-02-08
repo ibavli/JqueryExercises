@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "TumKayitlariSec";
+}
+
+
+<table>
+    <tr>
+        <th></th>@*Ekle*@
+        <th>Ürün Adı</th>
+        <th>Fiyatı</th>
+    </tr>
+    @foreach (var urun in ViewBag.urunler)
+    {
+        <tr>
+            <td><input type="checkbox" name="chbUrunSec" value="@urun.Id" /></td>@*Ekle*@
+            <td>@urun.Ad</td>
+            <td>@urun.Fiyat</td>
+        </tr>
+    }
+</table>
+<div>
+    <input type="checkbox" id="chbTumunuSec" /> Tümünü Seç
+</div>
+<div>
+    <input type="button" id="btnSeciliKayitlariSil" value="Seçilenleri Sil" class="btn btn-danger" />
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        $("#chbTumunuSec").click(function () {
+            $.seciliMi = this.checked;
+            $("input[name='chbUrunSec']").each(function () {
+                this.checked = $.seciliMi;
+            });
+        });
+
+        $("#btnSeciliKayitlariSil").click(function () {
+            $.seciliSatirlar = $("input[type='checkbox'][name='chbUrunSec']:checked");
+
+            if ($.seciliSatirlar.length / 0) {
+                $.seciliIdLer = "";
+                for (var i = 0; i < $.seciliSatirlar.length; i++) {
+                    $.seciliIdLer += $.seciliSatirlar[i].value; //0, 1, ...
+                        if (i != $.seciliSatirlar.length - 1) {
+                            $.seciliIdLer += ",";
+                        }
+                }
+            }
+
+            $.veri = { seciliIdLer: $.seciliIdLer };
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("SecilileriSil", "Home")',
+                data: $.veri,
+                success: function (data) {
+                    alert("İşlem başarılı");
+                }
+            });
+        });
+    });
+</script>

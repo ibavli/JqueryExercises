@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "TextboxKalanKarakterSayisi";
+}
+
+<div>
+    <input type="text" id="durum" style="width:300px;" /><br />
+    <input type="button" id="durumGonder" value="Gönder" />
+</div>
+<div>
+    <div id="kalanKarakterSayisi"></div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+
+        $.enFazlaKarakterSayisi = 50;
+
+        $.karakterSayisi = $("#durum").val().length;
+
+        $.kalanKarakterSayisi = $.enFazlaKarakterSayisi - $.karakterSayisi;
+
+        $("#kalanKarakterSayisi").text($.kalanKarakterSayisi + " karakter kaldı").css("color", "black");
+
+        $("#durum").keyup(function () {
+
+            $.karakterSayisi = $("#durum").val().length;
+            $.kalanKarakterSayisi = $.enFazlaKarakterSayisi - $.karakterSayisi;
+            $("#kalanKarakterSayisi").text($.kalanKarakterSayisi + " karakter kaldı");
+
+            if ($.kalanKarakterSayisi >= 0) {
+                $("#kalanKarakterSayisi").css("color", "#5c0000");
+                $("#durumGonder").removeAttr("disabled");
+            }
+            else {
+                $("#kalanKarakterSayisi").css("color", "red");
+                $("#durumGonder").attr("disabled", "disabled");
+                $("#kalanKarakterSayisi").text($.kalanKarakterSayisi + " kadar fazla karakter yazdınız");
+            }
+        });
+
+    });
+</script>
+
