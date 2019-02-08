@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "SeciliOnayKutulariniAlma";
+}
+
+<h2>Seçili olan onay kutusu kontrollerine ulaşmak için checked filtresi kullanılır.</h2>
+
+<input type="checkbox" id="cocukVarMi" checked />
+<input type="checkbox" id="evVarmi" checked />
+<input type="checkbox" id="evliMi" />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.seciliElemanlar = $("input[type='checkbox']:checked");
+
+        jQuery.each($.seciliElemanlar, function (index, value) {
+            alert(value.id);
+        });
+    });
+</script>
+

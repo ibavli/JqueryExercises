@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "FirstChildKullanimi";
+}
+
+<h2>Seçilen elemanların ilkini ve o elemanın altındaki aynı türden ilk elemanları seçmek için first-child filtresi kullanılır. Aşağıdaki yapıda $("div:first-child") tanımlaması ile sayfadaki ilk div nesnesinin (div0) altındaki tüm ilk div nesnelerine ulaşabiliriz.</h2>
+
+<div id="div0">
+    <label id="ad">Ad</label>
+    <label>Soyad</label>
+    <label>Yaş</label>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ikinciInput = $("#div0 label:first-child")[0];
+        alert($.ikinciInput.id);
+    });
+</script>
+

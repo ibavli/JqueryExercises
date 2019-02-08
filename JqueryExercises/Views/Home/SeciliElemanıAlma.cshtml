@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "SeciliElemanıAlma";
+}
+
+<h2>Açılan liste kutusunun seçili elemanını alma.</h2>
+
+<select id="sehirler">
+    <option value="01">Adana</option>
+    <option value="07">Antalya</option>
+    <option value="10">Balıkesir</option>
+    <option value="34">istanbul</option>
+    <option value="35" selected>izmir</option>
+    <option value="45">Manisa</option>
+
+</select>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        alert($("#sehirler option:selected").val());
+        alert($("#sehirler option:selected").text());
+    });
+</script>
+
+

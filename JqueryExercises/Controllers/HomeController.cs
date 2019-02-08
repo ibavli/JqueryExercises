@@ -85,5 +85,60 @@ namespace JqueryExercises.Controllers
         {
             return View();
         }
+
+        #region Html Elemanlarını Filtreleme
+       
+        public ActionResult FirstAndLastKullanimi()
+        {
+            return View();
+        }
+        public ActionResult NotKullanimi()
+        {
+            return View();
+        }
+        public ActionResult FirstChildKullanimi()
+        {
+            return View();
+        }
+        public ActionResult HasKullanimi()
+        {
+            return View();
+        }
+        public ActionResult HiddenlariSecme()
+        {
+            return View();
+        }
+        public ActionResult VisiblelariSecme()
+        {
+            return View();
+        }
+        public ActionResult DisabledlariSecme()
+        {
+            return View();
+        }
+        public ActionResult EnabledlariSecme()
+        {
+            return View();
+        }
+        public ActionResult SeciliElemanıAlma()
+        {
+            return View();
+        }
+        public ActionResult SeciliOnayKutulariniAlma()
+        {
+            return View();
+        }
+
+        #endregion
+
+
+        #region Html Elemanlarının Yönetimi
+
+        public ActionResult SayfadakiTumNesneleriAlma()
+        {
+            return View();
+        }
+
+        #endregion
     }
 }

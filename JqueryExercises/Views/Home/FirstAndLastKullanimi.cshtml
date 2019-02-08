@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "FirstAndLastKullanimi";
+}
+
+<h2>Seçilen elemanlar arasından ilk elemanı seçmek için first filtresi kullanılır.</h2>
+
+<body>
+    <input type="text" id="ad" placeholder="adınızı giriniz"/>
+    <input type="text" id="soyad" placeholder="soyadınızı giriniz" />
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ilkInputEleman = $("input:first");
+        //$.ilkInputEleman = $("[name='ad']:first"); //Name'e göre ilk
+        alert("İlk input eleman id'si " + $.ilkInputEleman[0].id);
+
+        $.sonInputEleman = $("input:last");
+        //$.sonInputEleman = $("[name='ad']:first"); //Name'e göre son
+        alert("Son input eleman id'si " + $.sonInputEleman[0].id);
+    });
+</script>
+
+

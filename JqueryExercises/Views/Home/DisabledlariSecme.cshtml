@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "DisablelariSecme";
+}
+
+<h2>Sayfadaki <b>disabled</b> nesneleri seçme.</h2>
+
+<input type="text" id="ad" name="ad" />
+<input type="text" id="soyad" name="soyad" disabled />
+<input type="text" id="yas" name="yas" disabled />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.disabledElemanlar = $("input:disabled");
+        jQuery.each($.disabledElemanlar, function (index, value) {
+            alert(value.id);
+        });
+    });
+</script>
+
+
+

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "NotKullanimi";
+}
+
+<h2>Seçilen elemanlar arasından belirtilen özelliklere sahip olmayan elemanları seçmek için not filtresi kullanılır. Örnek olarak sayfada input elemanları içerisinden id degeri "bilgi" olmayan elemanları alma kodu $("input:not(#bilgi)") veya $("[name='ad']:not(#bilgi)")</h2>
+
+<body>
+    <input type="text" id="bilgi" name="ad" placeholder="adınızı giriniz" />
+    <input type="text" id="soyad" name="soyad" placeholder="soyadınızı giriniz" />
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.idAdOlmayan = $("input:not(#bilgi)");
+        //$.ilkInputEleman = $("[name='ad']:first"); //Name'e göre ilk
+        alert("Tanımlanan özelliğin olmadığı eleman " + $.idAdOlmayan[0].id);
+
+        $.nameAdOlmayan = $("[name='soyad']:not(#bilgi)");
+        //$.sonInputEleman = $("[name='ad']:first"); //Name'e göre son
+        alert("Tanımlanan özelliğin olmadığı eleman " + $.nameAdOlmayan[0].id);
+    });
+</script>

@@ -134,6 +134,18 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Home\FirstAndLastKullanimi.cshtml" />
+    <Content Include="Views\Home\NotKullanimi.cshtml" />
+    <Content Include="Views\Home\IndexNumarasinaGoreElemanSecme.cshtml" />
+    <Content Include="Views\Home\FirstChildKullanimi.cshtml" />
+    <Content Include="Views\Home\HasKullanimi.cshtml" />
+    <Content Include="Views\Home\HiddenlariSecme.cshtml" />
+    <Content Include="Views\Home\VisiblelariSecme.cshtml" />
+    <Content Include="Views\Home\DisabledlariSecme.cshtml" />
+    <Content Include="Views\Home\EnabledlariSecme.cshtml" />
+    <Content Include="Views\Home\SeciliElemanıAlma.cshtml" />
+    <Content Include="Views\Home\SeciliOnayKutulariniAlma.cshtml" />
+    <Content Include="Views\Home\SayfadakiTumNesneleriAlma.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

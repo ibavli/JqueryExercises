@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "HiddenlariSecme";
+}
+
+<h2>Sayfadaki gizli nesneleri yani hidden'ları seçme.</h2>
+
+<div id="div0" hidden>div0 text</div>
+<div id="div1">div1 text</div>
+<div id="div2" hidden>div2 text</div>
+<div id="div3">div3 text</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.hiddenDivler = $("div:hidden");
+        jQuery.each($.hiddenDivler, function (index, value) {
+            alert(value.id);
+        });
+    });
+</script>
+
+
+
+

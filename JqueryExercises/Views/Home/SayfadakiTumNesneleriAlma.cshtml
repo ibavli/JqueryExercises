@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Html Elemanlarının Yönetimi";
+}
+
+<h2>Tanımlanan nesnenin içindeki tüm elemanlara ulaşmak için get fonksiyonu kullanılır.</h2>
+<h2>Sayfadaki bir nesneyi index numarasına göre almak için get fonksiyonu kullanılır. Parantez içinde index numarası yazılır.</h2>
+<h2>Eleman sayısını size ile alabiliriz.</h2>
+<h2>Eleman id bilgisini alabiliriz.</h2>
+<h2>Eleman name bilgisini alabiliriz.</h2>
+<h2>Eleman text bilgisini alabiliriz.</h2>
+<h2>Eleman html bilgisini alabiliriz.</h2>
+<h2>Elemana html ekleme yapabiliriz.(Append)</h2>
+<h2>Eleman Kopyalama yapabiliriz.(Clone)</h2>
+<h2>Elemandan sonraya eleman ekleme(InsertAfter) (kopyalama değil taşıma işlemi)</h2>
+
+<div id="div0">0</div>
+<div id="div1">1</div>
+<div id="div2">2</div>
+<div id="div3">3</div>
+<div id="div4">4</div>
+<div id="div5">5</div>
+
+<input type="text" name="ad" placeholder="adınızı giriniz" />
+<input type="text" name="soyad" placeholder="soyadınızı giriniz" />
+<input type="text" name="yas" placeholder="yaşınızı giriniz" />
+
+
+<div id="yaziliDiv">Bu yazı <b>yaziliDiv</b> id'li div içerisindedir.</div>
+<hr />
+<input type="button" value="Butona Tıkla Dive Yazı Gelsin" id="diveyazBtn" class="btn btn-success" />
+<div id="yaziEklenecekDiv"></div>
+<hr />
+
+<input type="button" value="Butona Tıkla Butonu Kopyala" id="btnKopyala" class="btn btn-success" />
+<div id="btnKopya"></div>
+
+<hr />
+<input type="button" value="Taşınacak Buton" id="tasinacakButon" class="btn btn-success" />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        $.tumDivler = $("div").get();
+        $.divMesaji = "";
+        for ($.i = 0; $.i < $.tumDivler.length; $.i++) {
+            $.divMesaji += $.tumDivler[$.i].id + "\n";
+        }
+        alert($.divMesaji);
+
+
+        //Sayfada daha üstte başka divler olduğu için div4'e erişmek için index'i 10 yazdık.
+        alert($("div").get(10).id);
+
+
+        ////Eleman sayısını alma
+        //$.divSayisi = $("div").size();
+        //alert("Eleman sayısı => " + $.divSayisi);
+
+
+        //Elemanın id bilgisin alma
+        $.altinciDivId = $("div").get(6).id;
+        alert($.altinciDivId);
+
+
+        //Elemanın name bilgisini alma
+        $.ilkInputName = $("input[type='text']").get(0).name;
+        alert($.ilkInputName);
+
+
+        //Elemanın text bilgisini alma
+        $.divText = $("#yaziliDiv").text();
+        alert($.divText);
+
+
+        //Elemanın html içeriğinin bilgisini alma
+        $.divHtmlBilgisi = $("#yaziliDiv").html();
+        alert($.divHtmlBilgisi);
+
+
+        //Elemena html ekleme (Append)
+        $("#diveyazBtn").click(function () {
+            $("#yaziEklenecekDiv").append("Merhaba <b>Ali veli</b> Hoşgeldin!");
+        });
+
+
+        //Eleman Kopyalama
+        $.buton = $("#button").clone();
+        $("#btnKopyala").click(function () {
+            $("#btnKopya").append($.buton);
+        });
+
+
+        //Elemandan sonraya eleman ekleme(InsertAfter) (kopyalama değil taşıma işlemi)
+        $("#tasinacakButon").insertAfter("#div2");
+
+
+        //Elemandan önceye eleman ekleme(InsertBefore) (kopyalama değil taşıma işlemi)
+        $("#tasinacakButon").insertBefore("#div4");
+    });
+</script>
+
+
+

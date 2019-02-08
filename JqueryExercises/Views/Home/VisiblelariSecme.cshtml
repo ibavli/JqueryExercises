@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "VisiblelariSecme";
+}
+
+<h2>Sayfadaki <b>gizli olmayan</b> nesneleri seçme.</h2>
+
+<div id="div0" hidden>div0 text</div>
+<div id="div1">div1 text</div>
+<div id="div2" hidden>div2 text</div>
+<div id="div3">div3 text</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.visibleDivler = $("div:visible");
+        alert($.visibleDivler.last()[0].id);
+    });
+</script>
+
+

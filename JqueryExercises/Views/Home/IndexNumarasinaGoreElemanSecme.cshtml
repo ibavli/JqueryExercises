@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "IndexNumarasinaGoreElemanSecme";
+}
+
+
+<h2>Index numarasına göre (eşit olan) eleman için eq</h2>
+<h2>Index numarasına göre büyük olan eleman için gt</h2>
+<h2>Index numarasına göre küçük olan eleman için lt</h2>
+
+<body>
+    <input type="text" id="bilgi1" name="bilgi" placeholder="adınızı giriniz" />
+    <input type="text" id="bilgi2" name="bilgi" placeholder="soyadınızı giriniz" />
+    <input type="text" id="bilgi3" name="bilgi" placeholder="yaşınızı giriniz" />
+    <input type="text" id="bilgi4" name="bilgi" placeholder="doğum yerinizi giriniz" />
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ikinciInput = $("input:eq(2)");
+        alert("İkinci inputun id'si " + $.ikinciInput[0].id);
+
+        $.ikinciInput2 = $("[name='bilgi']:eq(2)");
+        alert("İkinci inputun id'si " + $.ikinciInput2[0].id);
+
+        $.birdenBuyukler = $("input:gt(1)");
+        //$.birdenBuyukler = $("[name='bilgi']:gt(1)");
+        jQuery.each($.birdenBuyukler, function (index, value) {
+            alert("Birden büyük => " + value.id);
+        });
+
+        $.ikidenKucukler = $("input:lt(2)");
+        //$.ikidenKucukler = $("[name='bilgi']:lt(2)");
+        jQuery.each($.ikidenKucukler, function (index, value) {
+            alert("İkiden küçük => " + value.id);
+        });
+    });
+</script>
+

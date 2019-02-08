@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "HasKullanimi";
+}
+
+<h2>Seçilen elemanların ya da sayfanın içinden tanımlanan özelliklere sahip olan nesneleri seçme işlemi için has filtresi kullanılır.</h2>
+
+<div id="div0">
+    <input type="text" id="ad" name="ad" />
+</div>
+<div id="div1">
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.seciliDiv = $("div:has(#ad)");
+        alert($.seciliDiv.last()[0].id);
+    });
+</script>
+
+
