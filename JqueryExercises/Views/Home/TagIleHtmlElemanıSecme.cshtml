@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "TagIleHtmlElemanıSecme";
+}
+
+<h2>Jquery ile HTML elemanlarına elemanların etiketleriyle (input, ul, li, div ...) erişebiliriz. Debug yapılarak incelenebilir.</h2>
+
+Adı : <input type="text" id="ad" />
+<br />
+Soyad : <input type="text" id="soyad" />
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.inputlar = $(document).find("input");
+    });
+</script>
+
+

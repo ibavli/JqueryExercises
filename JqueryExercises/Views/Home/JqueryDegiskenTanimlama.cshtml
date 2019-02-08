@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "JqueryDegiskenTanimlama";
+}
+
+<h2>Bu sayfada değişken tanımladık ve değişkeni uyarı mesajı ile gösterdik.</h2>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ogrenci = {
+            Ad: "ali",
+            Soyad: "veli"
+        };
+        alert($.ogrenci.Ad + " " + $.ogrenci.Soyad);
+    });
+</script>
+

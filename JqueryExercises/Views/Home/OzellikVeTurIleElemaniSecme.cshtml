@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "OzellikVeTurIleElemaniSecme";
+}
+
+<h2>Jquery'de filtrelenen elemanlardan sıra numarasına (indexine) göre bir elemanı almak için eq(index) fonksiyonu kullanılır. Fonksiyonun parametresinde kaçıncı eleman alınacaksa o elemanın indeksi yazılır. Örnek olarak sayfada name'i nameBilgi olan 3 eleman varsa ve biz ikincisine ulaşmak istiyorsak $("[name='nameBilgi']").eq(1)[0] yazmamız gerekiyor.</h2>
+
+<input type="text" id="idBilgi" name="nameBilgi" />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.inputveidsiidBilgiOlan = $("input[id='idBilgi']")[0].name;
+
+        alert($.inputveidsiidBilgiOlan);
+    });
+</script>
+
+

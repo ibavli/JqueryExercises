@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "JqueryDegiskenIcerisineFonksiyonTanimlama";
+}
+
+<h2>Jquery ile değişken tanımlama işlemi sırasında değişkenin özelliklerinin yanında <b>function</b> tanımlası da yapmak isteyebiliriz. Örneğin öğrencinin adı soyadı değişkenin içerisinde  bir de aralarında bir boşluk olacak şekilde IsimGoster fonksiyonu oluşturup onu çağırabiliriz.</h2>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ogrenci = {
+            Ad: "ali",
+            Soyad: "veli",
+            IsimGoster: function () {
+                alert($.ogrenci.Ad + " " + $.ogrenci.Soyad);
+            }
+        };
+        $.ogrenci.IsimGoster();
+    });
+</script>
+

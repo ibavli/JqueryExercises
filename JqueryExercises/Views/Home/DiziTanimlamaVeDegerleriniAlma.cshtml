@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "DiziTanimlamaVeDegerleriniAlma";
+}
+
+<h2>Dizi Tanimlama Ve Degerlerini Alma</h2>
+
+<input type="button" id="myBtn" value="Tıkla" />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //$.sayilar = [1, 2, 3, 4, 5];
+        $.isimler = ["ali", "veli", "ahmet", "mehmet"];
+        jQuery.each($.isimler, function (index, deger) {
+            alert("index : " + index + " değer : " + deger);
+        });
+    });
+</script>

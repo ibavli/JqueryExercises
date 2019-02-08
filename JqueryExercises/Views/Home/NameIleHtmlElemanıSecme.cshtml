@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "NameIleHtmlElemanıSecme";
+}
+
+<h2>Jquery ile HTML elemanlarına elemanların name özelliği ile erişebiliriz. Ayrıca <b>first</b> ve <b>last</b> metodlarını kullanarak değerlere ulaşabiliriz. Debug yapılarak incelenebilir.</h2>
+
+<div name="nameBilgi" id="idAd">Ad</div>
+<div name="nameBilgi" id="idSoyad">Soyad</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.nameBilgiNameineSahipOlanlar = $("[name='nameBilgi']");
+
+        $.ilkeleman = $.nameBilgiNameineSahipOlanlar.first()[0].id;
+        $.soneleman = $.nameBilgiNameineSahipOlanlar.last()[0].id;
+
+        alert("first() ile ilk elamanı seçtik => " + $.ilkeleman);
+        alert("last() ile son elamanı seçtik => " + $.soneleman);
+    });
+</script>
+
+

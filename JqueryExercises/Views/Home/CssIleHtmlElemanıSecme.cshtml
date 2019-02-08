@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "CssIleHtmlElemanıSecme";
+}
+
+<h2>Jquery ile HTML elemanlarına elemanlara tanımlanan css sınıfları ile erişebiliriz. Debug yapılarak incelenebilir.</h2>
+
+<div class="kisiBilgiClassi" id="ad">Ad</div>
+<div class="kisiBilgiClassi" id="soyad">Soyad</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.kisiClassinaSahipOlanlar = $(".kisiBilgiClassi");
+    });
+</script>

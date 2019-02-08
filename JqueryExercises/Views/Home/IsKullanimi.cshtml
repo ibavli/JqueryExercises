@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "IsKullanimi";
+}
+
+<h2>Jquery'de bir elemanın ya da bir eleman grubunun bir özelliğe sahip olup olmadığı is fonksiyonu ile kontrol edilir. Örneğin divid id'li bir elemanın div türünden bir eleman olup olmadığını kontrol etmek isteyebiliriz. $("#divid").is("div")</h2>
+
+<body>
+    <div id="divid"></div>
+    <input type="text" id="textid" />
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.divMi = $("#divid").is("div");
+        alert("divid div mi? " + $.divMi);
+
+        $.textMi = $("#textid").is("input");
+        alert("textid text mi? " + $.textMi);
+    });
+</script>
+

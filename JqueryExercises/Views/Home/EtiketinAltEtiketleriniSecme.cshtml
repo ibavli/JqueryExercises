@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "EtiketinAltEtiketleriniSecme";
+}
+
+<h2>Bir sayfada HTML elemanları iç içe olabilir. Örneğin maddeleme işlemi için kullanılan ul-li elemanları buna en güzel örnektir. Bir ul etiketinin altında bir çok li etiketi olabilir. ul içindeki li elemanlarına erişilmesi gereken durumlarda en üst seviyeden, yani body içinde ulaşılmak istenen li'nin bulunduğu en üst elemana ulaşıp, sırayla içerideki elemanlara hiyerarşik olarak ulaşılır ve en son istenen li elemanına ulaşılıp kullanılır. $("body>div>div") gibi...</h2>
+
+<body>
+    <div id="distakidiv">
+        <div id="ictekidiv">
+            <div id="enictekidiv">
+                <input type="text" name="ad" id="idAd" />
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.enIctekiDivinIcindekiInputunIdsi = $("#distakidiv>#ictekidiv>#enictekidiv>[name='ad']")[0].id;
+        alert($.enIctekiDivinIcindekiInputunIdsi);
+    });
+</script>

@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "BirdenFazlaDivSecme";
+}
+
+<h2>Birden fazla div seçme id'ye göre ve name'e göre</h2>
+
+<body>
+    <div id="div1id"></div>
+    <div id="div2id"></div>
+
+    <div name="div1name" id="div1nameid"></div>
+    <div name="div2name" id="div2nameid"></div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //id'ye göre
+        $.divler = $("#div1id, #div2id");
+        $.div1id = $.divler[0].id;
+        $.div2id = $.divler[1].id;
+
+        alert("1. div Id'si => " + $.div1id + " \n2. div Id'si => " + $.div2id);
+
+
+        //name'e göre
+        $.divler2 = $("[name='div1name'], [name='div2name']");
+        $.div1Name = $.divler2[0].id;
+        $.div2Name = $.divler2[1].id;
+
+        alert("1. div name'i => " + $.div1Name + " \n2. div name'i => " + $.div2Name);
+    });
+</script>
+
