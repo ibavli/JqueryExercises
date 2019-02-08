@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Urun";
+}
+
+<input type="button" id="btAjax" value="ajax ile Getir" />
+<br />
+<input type="button" id="btGetJson" value="getJSON ile Getir" />
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //Ajax ile getir
+        $("#btAjax").click(function () {
+            $.ajax({
+                url: "/api/UrunApi/Urun",
+                type: "GET",
+                dataType: "json",
+                success: function (urun) {
+                    alert("Ajax Ürün adı : " + urun.Ad);
+                }
+            });
+        });
+
+
+        //GetJSON ile getir
+        $("#btGetJson").click(function () {
+            $.getJSON('/api/UrunApi/Urun').done(function (urun) {
+                alert("GetJSON Ürün adı : " + urun.Ad);
+            });
+        });
+
+
+    });
+</script>
+

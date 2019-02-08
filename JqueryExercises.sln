@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JqueryExercises", "JqueryExercises\JqueryExercises.csproj", "{F05D46D7-FE92-4F04-B4AA-BD8F59BC3DAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JqueryAjaxExercises", "JqueryAjaxExercises\JqueryAjaxExercises.csproj", "{2C5A7345-0E54-4053-8A6C-CC38ADA9757D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F05D46D7-FE92-4F04-B4AA-BD8F59BC3DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F05D46D7-FE92-4F04-B4AA-BD8F59BC3DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F05D46D7-FE92-4F04-B4AA-BD8F59BC3DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C5A7345-0E54-4053-8A6C-CC38ADA9757D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5A7345-0E54-4053-8A6C-CC38ADA9757D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5A7345-0E54-4053-8A6C-CC38ADA9757D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5A7345-0E54-4053-8A6C-CC38ADA9757D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

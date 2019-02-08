@@ -1,0 +1,90 @@
+﻿@model JqueryAjaxExercises.Models.Urun
+
+@{
+    ViewBag.Title = "Yeni";
+}
+
+<h2>Yeni</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Urun</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ad, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Ad, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Ad, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fiyat, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fiyat, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Fiyat, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" value="Kaydet ($.post ile)" id="btnKaydetPost" class="btn btn-default" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" value="Kaydet ($.post ile)" id="btnKaydetAjax" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#btnKaydetPost").click(function () {
+
+            $.ad = $("#Ad").val();
+            $.fiyat = $("#Fiyat").val();
+            $.urun = {
+                "Ad": $.ad,
+                "Fiyat": $.fiyat
+            };
+
+            //$.post ile gönderdik
+            $.post('@Url.Action("Kaydet", "api/UrunApi")', $.urun).done(function () {
+                alert("İşlem başarılı.");
+            }).fail(function () {
+                alert("Hata oluştu");
+                });
+        });
+
+
+        $("#btnKaydetAjax").click(function () {
+
+            $.ad = $("#Ad").val();
+            $.fiyat = $("#Fiyat").val();
+            $.urun = {
+                "Ad": $.ad,
+                "Fiyat": $.fiyat
+            };
+
+            //$.ajax ile gönderdik
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Kaydet", "api/UrunApi")',
+                data: $.urun,
+                dataType: "json",
+                success: function (data) {
+                    alert("İşlem başarılı.");
+                }
+            });
+        });
+
+    });
+</script>
