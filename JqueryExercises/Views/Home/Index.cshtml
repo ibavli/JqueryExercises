@@ -30,3 +30,152 @@
     <a href="~/Home/SayfadakiTumNesneleriAlma" class="btn btn-success">Sayfadaki Tum Nesneleri Alma</a>
 </div>
 
+<hr />
+<div>
+    <table class="table">
+        <tr>
+            <th>Kod</th>
+            <th>Açıklama</th>
+        </tr>
+        <tr>
+            <td><b>$("*")</b></td>
+            <td>Bütün elemanlar</td>
+        </tr>
+        <tr>
+            <td><b>$("div")</b></td>
+            <td>Bütün div elemanları</td>
+        </tr>
+        <tr>
+            <td><b>$(".blue")</b></td>
+            <td>class'ı blue olan tüm elemanlar</td>
+        </tr>
+        <tr>
+            <td><b>$(".blue.red")</b></td>
+            <td>class'ı blue <b>VE</b> red olan tüm elemanlar</td>
+        </tr>
+        <tr>
+            <td><b>$(".blue,.red")</b></td>
+            <td>class'ı blue <b>VEYA</b> red olan tüm elemanlar</td>
+        </tr>
+        <tr>
+            <td><b>$("#headline")</b></td>
+            <td>id'si headline olan ilk eleman</td>
+        </tr>
+        <tr>
+            <td><b>$("[href]")</b></td>
+            <td>attribute'ü href olan tüm elemanlar</td>
+        </tr>
+        <tr>
+            <td><b>$("[href='example.com']")</b></td>
+            <td>href=example.com olan tüm elemanlar</td>
+        </tr>
+        <tr>
+            <td><b>$(this)</b></td>
+            <td>sadece geçerli eleman</td>
+        </tr>
+        <tr>
+            <td><b>$("p.intro")</b></td>
+            <td>p elemanı olan ve intro class'ına sahip olan tüm elemanlar</td>
+        </tr>
+        <tr>
+            <td><b>$("p:first")</b></td>
+            <td>ilk p elemanını alır</td>
+        </tr>
+        <tr>
+            <td><b>$("ul li:first")</b></td>
+            <td>ilk ul elemanının ilk li elemanını alır</td>
+        </tr>
+        <tr>
+            <td><b>$("ul li:first-child")</b></td>
+            <td>ilk ul elemanının ilk li elemanını alır</td>
+        </tr>
+        <tr>
+            <td><b>$(":button")</b></td>
+            <td>Bütün button element ve input type ="button" elemanlarını seçer</td>
+        </tr>
+        <tr>
+            <td><b>$("tr:even")</b></td>
+            <td>Tüm tr öğelerini seçer</td>
+        </tr>
+    </table>
+
+    <p>
+        <h2>Döküman Yüklendiğinde</h2>
+        $(document).ready(function(){<br /><br />
+
+        // jQuery methods go here...<br /><br />
+
+        });<br />
+        <b>veya</b><br />
+        $(function(){<br /><br />
+
+        // jQuery methods go here...<br /><br />
+
+        });<br />
+    </p>
+    <p>
+        <h2>Çift tıklama</h2>
+        $("p").dblclick(function(){<br />
+        $(this).hide();<br />
+        });<br />
+    </p>
+    <p>
+        <h2>Fare imleci üzerine geldiğinde</h2>
+        $("#p1").mouseenter(function(){<br />
+        alert("You entered p1!");<br />
+        });<br />
+    </p>
+    <p>
+        <h2>Mouse imleci üzerinden gittiğinde</h2>
+        $("#p1").mouseleave(function(){<br />
+        alert("Bye! You now leave p1!");<br />
+        });<br />
+    </p>
+    <p>
+        <h2>Sağ tık, sol tık veya mouse orta tık</h2>
+        $("#p1").mousedown(function(){<br />
+        alert("Mouse down over p1!");<br />
+        });<br />
+    </p>
+    <p>
+        <h2>Hover() iki işlevi alır. ("mouseenter()" ve "mouseleave()") İlk işlev, fare HTML öğesine girdiğinde yürütülür ve ikinci işlev, fare HTML öğesinden ayrıldığında yürütülür:</h2>
+        $("#p1").hover(function(){<br />
+        alert("You entered p1!");<br />
+        },<br />
+        function(){<br />
+        alert("Bye! You now leave p1!");<br />
+        });<br />
+    </p>
+    <p>
+        <h2>İşlev, form alanı odaklandığında yürütülür</h2>
+        $("input").focus(function(){<br />
+        $(this).css("background-color", "#cccccc");<br />
+        });<br />
+    </p>
+    <p>
+        <h2>on() => Bir veya daha fazla işlevi yapmamıza yarar.</h2>
+        $("p").on({<br />
+        mouseenter: function(){<br />
+        $(this).css("background-color", "lightgray");<br />
+        },<br />
+        mouseleave: function(){<br />
+        $(this).css("background-color", "lightblue");<br />
+        },<br />
+        click: function(){<br />
+        $(this).css("background-color", "yellow");<br />
+        }<br />
+        });<br />
+    </p>
+    <p>
+        <h2>Hide() ve show() gizlemek ve göstermek için kullanılır. Parametre geçerse o kadar milisaniyede yapar.</h2>
+        $("button").click(function(){<br />
+        $("p").hide(1000);<br />
+        });<br />
+    </p>
+    <p>
+        <h2>Gizle/Göster Aç/Kapa mantığı</h2>
+        $("button").click(function(){<br />
+        $("p").toggle();<br />
+        });<br />
+    </p>
+</div>
